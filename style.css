@@ -28,7 +28,7 @@ body {
     --grey-800: #383E49;
     --primary-500: #1570EF;
     --primary-600: #1366D9;
-    --sidebar-hover: #d4dbeb;
+    --sidebar-hover: #e3e6f0;
     --inter-font: "Inter";
 }
 
@@ -109,12 +109,18 @@ body {
 
 
 .main-container {
-    width: 100%;
+    flex-grow: 1;
 }
 
 .polygon {
     position: relative;
     margin-left: 6px;
+}
+
+.polygon-icon1 {
+    position: absolute;
+    left: 44;
+    top: 31;
 }
 
 .company-name {
@@ -191,12 +197,13 @@ a:hover {
 
 }
 
+
 .search-bar {
     background-image: url("./assets/Search.png");
     background-repeat: no-repeat;
     background-position: left;
+    background-position: 10px;
     width: 300px;
-    position: relative;
     font-weight: 500;
     font-size: 16px;
     color: var(--grey-600);
@@ -222,6 +229,21 @@ a:hover {
     outline: none;
 }
 
+.notificaton-btn {
+    border: 0;
+    background: var(--white);
+}
+
+.notificaton-btn:hover {
+    background: var(--sidebar-hover);
+    border-radius: 5px;
+    border: 0;
+    transition: 0.1s;
+    padding: 10px;
+
+}
+
+
 .profile {
     border-radius: 50%;
     height: 41px;
@@ -237,6 +259,8 @@ a:hover {
 /* start:inventory */
 .container {
     background: var(--grey-50);
+    overflow: auto;
+
 }
 
 .inventory {
@@ -464,9 +488,57 @@ button:hover {
 
     .sidebar-link-title {
         display: none;
+        padding: 8px;
     }
 
     .company-name {
         display: none;
     }
+}
+
+@media screen and (max-width:1000px) {
+    .aside {
+        width: 10%;
+        align-items: center;
+    }
+
+    .sidebar-link-title {
+        display: none;
+        padding: 8px;
+    }
+
+    .company-name {
+        display: none;
+    }
+
+    .inventory-body {
+        flex-direction: column;
+
+
+    }
+
+    .category,
+    .total-product,
+    .top-selling,
+    .low-stock {
+        width: 50%;
+        border: 0;
+        padding: 0;
+        flex: 1;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+
+    .category,
+    .total-product,
+    .top-selling,
+    .low-stock {
+        width: 100%;
+        border: 0;
+        padding-bottom: 44px;
+        flex: 1;
+    }
+
 }

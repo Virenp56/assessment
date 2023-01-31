@@ -11,14 +11,14 @@
 </head>
 
 <body>
-    <section class="section d-flex h-100 w-100">
+    <section class="section d-flex h-100 ">
         <input type="checkbox" id="toggle" class="d-none">
         <!-- start: sidebar -->
         <aside class="aside d-flex flex-column flex-space-between">
 
             <!-- start: upper sidebar -->
             <div class="upper-sidebar d-flex flex-column">
-                <div class="logo d-flex align-item-center w-100 pb-60">
+                <div class="logo d-flex align-item-center pb-60">
                     <div>
                         <img src="./assets/Logo.png" alt="logo" class="polygon">
 
@@ -30,13 +30,13 @@
 
                 <div class="sidebar-link d-flex flex-column">
                     <ul class="d-flex flex-column">
-                        <li class="mb-44"><a href="" class="d-flex w-100">
+                        <li class="mb-44"><a href="" class="d-flex">
                                 <div class="sidebar-link-icon"><img src="./assets/dashboard.png" alt=""></div>
                                 <div class="sidebar-link-title">Dashboard</div>
                             </a></li>
                         <li class="mb-44"><a href="" class="d-flex">
                                 <div class="sidebar-link-icon"><img src="./assets/inventory.png" alt=""></div>
-                                <div class="sidebar-link-title">Inventory</div>
+                                <div class="sidebar-link-title active">Inventory</div>
                             </a></li>
                         <li class="mb-44"><a href="" class="d-flex">
                                 <div class="sidebar-link-icon"><img src="./assets/report.png" alt=""></div>
@@ -75,196 +75,202 @@
             <!-- end: upper sidebar -->
 
         </aside>
-
-
         <!-- end: sidebar -->
 
         <!-- start: main-continer -->
-        <div class="main-container  d-flex flex-column">
+        <div class="main-container">
+            <section class="d-flex flex-column h-100 overflow-hidden">
+                <!-- start: nav-bar -->
+                <nav class="navbar d-flex flex-space-between align-item-center">
+                    <div class="left-navbar d-flex align-item-center">
 
-            <!-- start: nav-bar -->
-            <nav class="navbar d-flex flex-space-between align-item-center">
-                <div class="left-navbar d-flex align-item-center">
-
-                    <button class="ham-button"><label for="toggle"><img src="./assets/hambuger menu.png"
-                                alt=""></label></button>
-                    <input class="search-bar" type="text" placeholder="Search product, supplier, order">
-                </div>
-
-                <div class="right-navbar d-flex align-item-center">
-                    <button class="notificaton-btn"><img src="./assets/bell.png" alt="" class="notification"></button>
-                    <img src="./assets/profile.png" alt="" class="profile">
-                </div>
-            </nav>
-            <!-- end: nav-bar -->
-
-            <!-- start: container -->
-            <main class="container d-flex flex-column h-100">
-
-                <!-- start:inventory -->
-                <div class="inventory d-flex w-100 flex-column wrap">
-                    <div class="inventory-title">
-                        Overall Inventory
+                        <button class="ham-button"><label for="toggle"><img src="./assets/hambuger menu.png"
+                                    alt=""></label></button>
+                        <input class="search-bar" type="text" placeholder="Search product, supplier, order">
                     </div>
-                    <div class="inventory-body d-flex wrap">
-                        <div class="category d-flex flex-column">
-                            <span class="category-title">Category</span>
-                            <span class="category-number">14</span>
-                            <span class="category-day">Last 7 Days</span>
+
+                    <div class="right-navbar d-flex align-item-center">
+                        <button class="notificaton-btn"><img src="./assets/bell.png" alt=""
+                                class="notification"></button>
+                        <img src="./assets/profile.png" alt="" class="profile">
+                    </div>
+                </nav>
+                <!-- end: nav-bar -->
+
+                <!-- start: container -->
+                <main class="container d-flex flex-column h-100 p-3">
+
+                    <!-- start:inventory -->
+                    <div class="inventory d-flex w-100 flex-column wrap">
+                        <div class="inventory-title">
+                            Overall Inventory
                         </div>
-                        <div class="total-product d-flex flex-column yellow">
-                            <span class="total-product-title">Total Product</span>
-                            <div class="d-flex flex-space-between">
-                                <div class="d-flex flex-column"> <span class="category-number">868</span>
-                                    <span class="category-day">Last 7 Days</span>
+                        <div class="inventory-body d-flex wrap">
+                            <div class="category d-flex flex-column">
+                                <span class="category-title">Category</span>
+                                <span class="category-number">14</span>
+                                <span class="category-day">Last 7 Days</span>
+                            </div>
+                            <div class="total-product d-flex flex-column yellow">
+                                <span class="total-product-title">Total Product</span>
+                                <div class="d-flex flex-space-between">
+                                    <div class="d-flex flex-column"> <span class="category-number">868</span>
+                                        <span class="category-day">Last 7 Days</span>
+                                    </div>
+                                    <div class="d-flex flex-column align-item-end"> <span
+                                            class="category-number">₹25000</span>
+                                        <span class="category-day">Revenue</span>
+                                    </div>
                                 </div>
-                                <div class="d-flex flex-column align-item-end"> <span
-                                        class="category-number">₹25000</span>
-                                    <span class="category-day">Revenue</span>
+                            </div>
+                            <div class="top-selling d-flex flex-column">
+                                <span class="top-selling-title">Top Selling</span>
+                                <div class="d-flex flex-space-between">
+                                    <div class="d-flex flex-column"> <span class="category-number">5</span>
+                                        <span class="category-day">Last 7 Days</span>
+                                    </div>
+                                    <div class="d-flex flex-column align-item-end"> <span
+                                            class="category-number">2500</span>
+                                        <span class="category-day">Cost</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="low-stock d-flex flex-column">
+                                <span class="low-stock-title">Low Stocks</span>
+                                <div class="d-flex flex-space-between">
+                                    <div class="d-flex flex-column"> <span class="category-number">12</span>
+                                        <span class="category-day">Ordered</span>
+                                    </div>
+                                    <div class="d-flex flex-column align-item-end"> <span
+                                            class="category-number">2</span>
+                                        <span class="category-day">Not in Stock</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="top-selling d-flex flex-column">
-                            <span class="top-selling-title">Top Selling</span>
-                            <div class="d-flex flex-space-between">
-                                <div class="d-flex flex-column"> <span class="category-number">5</span>
-                                    <span class="category-day">Last 7 Days</span>
-                                </div>
-                                <div class="d-flex flex-column align-item-end"> <span
-                                        class="category-number">2500</span>
-                                    <span class="category-day">Cost</span>
+                    </div>
+                    <!-- end:inventory -->
+
+                    <!-- start: table -->
+                    <div class="table-content-wrapper">
+                        <div class="table-container d-flex flex-column h-100">
+                            <!-- Table header -->
+                            <div class="product-row d-flex flex-space-between">
+                                <div class="product-title">Products</div>
+                                <div class="product-buttons">
+                                    <button class="add-product-btn">Add
+                                        Product</button>
+                                    <button class="filter-btn"><img src="./assets/filter.png" alt="" class="mr-10">
+                                        Filters</button>
+                                    <button class="download-btn">Download All</button>
                                 </div>
                             </div>
-                        </div>
-                        <div class="low-stock d-flex flex-column">
-                            <span class="low-stock-title">Low Stocks</span>
-                            <div class="d-flex flex-space-between">
-                                <div class="d-flex flex-column"> <span class="category-number">12</span>
-                                    <span class="category-day">Ordered</span>
-                                </div>
-                                <div class="d-flex flex-column align-item-end"> <span class="category-number">2</span>
-                                    <span class="category-day">Not in Stock</span>
-                                </div>
+                            <!-- Table  -->
+                            <table class="product-table ">
+                                <thead class="thead">
+                                    <tr class="thead-row">
+                                        <td>Product</td>
+                                        <td>Buying Price</td>
+                                        <td>Quantity</td>
+                                        <td>Thresold Value</td>
+                                        <td>Expiry Date</td>
+                                        <td>Availability</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Maggi</td>
+                                        <td>₹403</td>
+                                        <td>43 Packets</td>
+                                        <td>12 Packets</td>
+                                        <td>11/12/22</td>
+                                        <td class="In-Stock">In-Stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bru</td>
+                                        <td>₹257</td>
+                                        <td>22 Packets</td>
+                                        <td>12 Packets</td>
+                                        <td>21/12/22</td>
+                                        <td class="out-of-stock">Out of stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Red Bull</td>
+                                        <td>₹405</td>
+                                        <td>36 Packets</td>
+                                        <td>9 Packets</td>
+                                        <td>5/12/22</td>
+                                        <td class="In-Stock">In-Stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bourn Vita</td>
+                                        <td>₹502</td>
+                                        <td>14 Packets</td>
+                                        <td>6 Packets</td>
+                                        <td>8/12/22</td>
+                                        <td class="out-of-stock">Out of stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Horlicks</td>
+                                        <td>₹530</td>
+                                        <td>5 Packets</td>
+                                        <td>5 Packets</td>
+                                        <td>9/1/23</td>
+                                        <td class="In-Stock">In-Stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Harpic</td>
+                                        <td>₹605</td>
+                                        <td>10 Packets</td>
+                                        <td>5 Packets</td>
+                                        <td>9/1/23</td>
+                                        <td class="In-Stock">In-Stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ariel</td>
+                                        <td>₹408</td>
+                                        <td>23 Packets</td>
+                                        <td>7 Packets</td>
+                                        <td>15/12/23</td>
+                                        <td class="out-of-stock">Out of stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Scotch Brite</td>
+                                        <td>₹359</td>
+                                        <td>43 Packets</td>
+                                        <td>8 Packets</td>
+                                        <td>6/6/23</td>
+                                        <td class="In-Stock">In-Stock</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Coca cola</td>
+                                        <td>₹205</td>
+                                        <td>41 Packets</td>
+                                        <td>10 Packets</td>
+                                        <td>11/11/22</td>
+                                        <td class="low-stock-table">Low stock</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <!-- Table footer -->
+                            <div class="table-footer d-flex flex-space-between ">
+                                <button class="previous-btn">Previous</button>
+                                <div class="page-num">Page 1 to 10</div>
+                                <button class="next-btn">Next</button>
                             </div>
+
                         </div>
                     </div>
-                </div>
-                <!-- end:inventory -->
 
-                <!-- start: table -->
-                <div class="table-container d-flex flex-column h100">
-                    <div class="product-row d-flex flex-space-between">
-                        <div class="product-title">Products</div>
-                        <div class="product-buttons">
-                            <button class="add-product-btn">Add
-                                Product</button>
-                            <button class="filter-btn"><img src="./assets/filter.png" alt="" class="mr-10">
-                                Filters</button>
-                            <button class="download-btn">Download All</button>
-                        </div>
-                    </div>
-                    <table class="product-table w-100">
-                        <thead class="thead">
-                            <tr class="thead-row">
-                                <td>Product</td>
-                                <td>Buying Price</td>
-                                <td>Quantity</td>
-                                <td>Thresold Value</td>
-                                <td>Expiry Date</td>
-                                <td>Availability</td>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Maggi</td>
-                                <td>₹403</td>
-                                <td>43 Packets</td>
-                                <td>12 Packets</td>
-                                <td>11/12/22</td>
-                                <td class="In-Stock">In-Stock</td>
-                            </tr>
-                            <tr>
-                                <td>Bru</td>
-                                <td>₹257</td>
-                                <td>22 Packets</td>
-                                <td>12 Packets</td>
-                                <td>21/12/22</td>
-                                <td class="out-of-stock">Out of stock</td>
-                            </tr>
-                            <tr>
-                                <td>Red Bull</td>
-                                <td>₹405</td>
-                                <td>36 Packets</td>
-                                <td>9 Packets</td>
-                                <td>5/12/22</td>
-                                <td class="In-Stock">In-Stock</td>
-                            </tr>
-                            <tr>
-                                <td>Bourn Vita</td>
-                                <td>₹502</td>
-                                <td>14 Packets</td>
-                                <td>6 Packets</td>
-                                <td>8/12/22</td>
-                                <td class="out-of-stock">Out of stock</td>
-                            </tr>
-                            <tr>
-                                <td>Horlicks</td>
-                                <td>₹530</td>
-                                <td>5 Packets</td>
-                                <td>5 Packets</td>
-                                <td>9/1/23</td>
-                                <td class="In-Stock">In-Stock</td>
-                            </tr>
-                            <tr>
-                                <td>Harpic</td>
-                                <td>₹605</td>
-                                <td>10 Packets</td>
-                                <td>5 Packets</td>
-                                <td>9/1/23</td>
-                                <td class="In-Stock">In-Stock</td>
-                            </tr>
-                            <tr>
-                                <td>Ariel</td>
-                                <td>₹408</td>
-                                <td>23 Packets</td>
-                                <td>7 Packets</td>
-                                <td>15/12/23</td>
-                                <td class="out-of-stock">Out of stock</td>
-                            </tr>
-                            <tr>
-                                <td>Scotch Brite</td>
-                                <td>₹359</td>
-                                <td>43 Packets</td>
-                                <td>8 Packets</td>
-                                <td>6/6/23</td>
-                                <td class="In-Stock">In-Stock</td>
-                            </tr>
-                            <tr>
-                                <td>Coca cola</td>
-                                <td>₹205</td>
-                                <td>41 Packets</td>
-                                <td>10 Packets</td>
-                                <td>11/11/22</td>
-                                <td class="low-stock-table">Low stock</td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                    <div class="table-footer d-flex flex-space-between ">
-                        <button class="previous-btn">Previous</button>
-                        <div class="page-num">Page 1 to 10</div>
-                        <button class="next-btn">Next</button>
-                    </div>
-
-                </div>
-
-                <!-- end: table -->
+                    <!-- end: table -->
 
 
-            </main>
-            <!-- end: container -->
+                </main>
+                <!-- end: container -->
         </div>
-        <!-- end: main-continer -->
+    </section>
+    <!-- end: main-continer -->
     </section>
 </body>
 

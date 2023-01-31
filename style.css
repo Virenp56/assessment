@@ -37,6 +37,10 @@ body {
     width: 20%;
 }
 
+.table-content-wrapper {
+    padding: 30px 0;
+}
+
 .w-80 {
     width: 80%;
 }
@@ -101,12 +105,20 @@ body {
 .aside {
     border-right: 1px solid var(--grey-50);
     border-radius: 0px 8px 8px 0px;
-    padding: 30px;
-    width: 20%;
+    width: 280px;
     transform: translateX(0);
     transition: .5s ease-in-out;
 }
 
+.upper-sidebar {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.bottom-sidebar {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
 
 .main-container {
     flex-grow: 1;
@@ -137,29 +149,35 @@ ul {
 
 li {
     margin-left: 13px;
-    padding-top: 10px;
+    margin-right: 13px;
 }
 
 
 a {
     text-decoration: none;
+    color: var(--grey-500);
+
 }
 
-a:hover {
+
+
+
+.active {
+    color: var(--primary-600);
+}
+
+li:hover a {
     background: var(--sidebar-hover);
-    border-radius: 10px;
+    border-radius: 8px;
     color: var(--primary-500);
     transition: 0.3s;
-    padding-left: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+    padding: 10px 10px 10px 10px;
 
+}
 
 .sidebar-link-title {
     font-weight: 500;
     font-size: 16px;
-    color: var(--grey-600);
     margin-left: 18px;
 }
 
@@ -174,13 +192,6 @@ a:hover {
     padding: 30px 32px 20px 32px;
 }
 
-#toggle:checked+.aside {
-    display: none;
-}
-
-#toggle:checked+.main-container {
-    flex-grow: 1;
-}
 
 .ham-button {
     border: 0;
@@ -259,12 +270,12 @@ a:hover {
 /* start:inventory */
 .container {
     background: var(--grey-50);
-    overflow: auto;
+    /* overflow: auto; */
 
 }
 
 .inventory {
-    margin: 26px 32px 22px 32px;
+    /* margin: 26px 32px 22px 32px; */
     background: var(--white);
     border-radius: 8px;
 }
@@ -350,10 +361,15 @@ a:hover {
     color: var(--yellow);
 }
 
+.p-3 {
+    padding: 30px;
+    ;
+}
+
 /* end:inventory */
 .table-container {
-    margin-left: 32px;
-    margin-right: 32px;
+    /* margin-left: 32px;
+    margin-right: 32px; */
     background: var(--white);
     border-radius: 8px;
 }
@@ -477,28 +493,25 @@ button:hover {
 
 /* end:table */
 
+#toggle:checked+.aside {
+    width: 0;
+
+    transform: translateX(-280px);
+}
+
+#toggle:checked+.main-container {
+    flex-grow: 1;
+}
+
+
 /* end:container */
 
 
 /* media Query */
-@media screen and (max-width:1200px) {
-    .aside {
-        width: 10%;
-    }
-
-    .sidebar-link-title {
-        display: none;
-        padding: 8px;
-    }
-
-    .company-name {
-        display: none;
-    }
-}
 
 @media screen and (max-width:1000px) {
     .aside {
-        width: 10%;
+        width: 100px;
         align-items: center;
     }
 
@@ -513,7 +526,6 @@ button:hover {
 
     .inventory-body {
         flex-direction: column;
-
 
     }
 
@@ -539,6 +551,11 @@ button:hover {
         border: 0;
         padding-bottom: 44px;
         flex: 1;
+    }
+
+    .product-table {
+
+        overflow-x: auto;
     }
 
 }
